@@ -16,8 +16,12 @@
     <%= f.text_field :login %>
   </div>
   <div class="field">
-    <%= f.label :password_digest %><br />
-    <%= f.text_field :password_digest %>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
@@ -58,14 +62,6 @@
   <div class="field">
     <%= f.label :other_contacts %><br />
     <%= f.text_field :other_contacts %>
-  </div>
-  <div class="field">
-    <%= f.label :remember_token %><br />
-    <%= f.text_field :remember_token %>
-  </div>
-  <div class="field">
-    <%= f.label :admin %><br />
-    <%= f.check_box :admin %>
   </div>
   <div class="actions">
     <%= f.submit %>
