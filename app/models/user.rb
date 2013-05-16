@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  after_destroy :ensure_an_admin_remains
+  
   attr_accessible :city, :country, :date_of_birth, :education, :email, :login, :member_of_volunteer_organizations, :name, :other_contacts, :phone_number, :surname, :password, :password_confirmation
   has_secure_password
   
@@ -8,5 +10,12 @@ class User < ActiveRecord::Base
   validates :email, format: { with: VALID_EMAIL_REGEX }, 
 	uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
-  validates :password_confirmation, presence: true	
-end
+  validates :password_confirmation, presence: true
+
+  private
+	def ensure_an_admin_remains
+	  if User.count.zero?
+		raise "Last user can\'t be deleted"
+	  end
+    end
+end	
