@@ -9,10 +9,11 @@
 <body>
 
 <%= yield %>
-<%= current_user.id %>
-<%= current_user.login %>
-<%= current_user.remember_token %>
-
+<% if current_user %>
+  <%= current_user.id %>
+  <%= current_user.login %>
+  <%= current_user.remember_token %>
+<% end %>
 
 </body>
 </html>

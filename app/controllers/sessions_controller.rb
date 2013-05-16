@@ -7,11 +7,12 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_login(params[:login])
 	if user and user.authenticate(params[:password])
-	  cookies.permanent[:remember_token] = user.remember_token
+	  sign_in user
+	  
 	  #session[:user_id] = user.id
 	  current_user = user
 	  flash[:success] = "Welcome to Mutual Aid Mini-Social Network!"
-	  redirect_to user
+	  redirect_back_or user
 	else
 	  redirect_to signin_url, alert: "Wrong login/password combination"
 	end
