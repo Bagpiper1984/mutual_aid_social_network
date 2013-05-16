@@ -7,7 +7,10 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_login(params[:login])
 	if user and user.authenticate(params[:password])
-	  session[:user_id] = user.id
+	  cookies.permanent[:remember_token] = user.remember_token
+	  #session[:user_id] = user.id
+	  current_user = user
+	  flash[:success] = "Welcome to Mutual Aid Mini-Social Network!"
 	  redirect_to user
 	else
 	  redirect_to signin_url, alert: "Wrong login/password combination"
@@ -15,7 +18,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-	session[:user_id] = nil
+    cookies.delete(:remember_token)
+	user=nil
+	#session[:user_id] = nil
 	redirect_to users_url#, notice: "Сеанс работы завершен"
   end
 end

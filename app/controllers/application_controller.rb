@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   
   protected
     def authorize
-      unless User.find_by_id(session[:user_id])
+      unless User.find_by_remember_token(cookies[:remember_token])
+	  #unless User.find_by_id(session[:user_id])
 	  redirect_to 'signin', notice: "Please authorize"
     end
   end

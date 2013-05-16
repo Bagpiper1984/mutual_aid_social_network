@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   after_destroy :ensure_an_admin_remains
+  before_save { |user| user.email = email.downcase }
+  before_save { |user| user.login = login.downcase }
+  before_save :create_remember_token
   
   attr_accessible :city, :country, :date_of_birth, :education, :email, :login, :member_of_volunteer_organizations, :name, :other_contacts, :phone_number, :surname, :password, :password_confirmation
   has_secure_password
@@ -18,4 +21,9 @@ class User < ActiveRecord::Base
 		raise "Last user can\'t be deleted"
 	  end
     end
+
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
+  
 end	

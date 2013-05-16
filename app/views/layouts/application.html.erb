@@ -9,7 +9,10 @@
 <body>
 
 <%= yield %>
-<%= session[:user_id] %>
+<%= current_user.id %>
+<%= current_user.login %>
+<%= current_user.remember_token %>
+
 
 </body>
 </html>
