@@ -7,6 +7,7 @@ MutualAidSocialNetwork::Application.routes.draw do
   end
 
   resources :users
+  resources :cans, excpect: [:index, :show]
 
 
   # The priority is based upon order of creation:

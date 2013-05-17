@@ -50,5 +50,12 @@
   <%= @user.other_contacts %>
 </p>
 
+<h3>I can:</h3>
+<% if @user.cans.any? %>
+  <ol>
+    <%= render @cans %>
+  </ol>
+<% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

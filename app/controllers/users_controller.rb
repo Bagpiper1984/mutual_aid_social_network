@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-
+	#@can = @users.cans
+	
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+	@cans = @user.cans
 
     respond_to do |format|
       format.html # show.html.erb
@@ -90,14 +92,7 @@ class UsersController < ApplicationController
   end
   
   private
-    
-	def signed_in_user
-	  unless signed_in?
-	    store_location
-		redirect_to signin_url, notice: "Please sign in."
-	  end
-	end
-	
+  	
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)

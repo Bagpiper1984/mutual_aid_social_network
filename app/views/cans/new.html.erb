@@ -1,0 +1,13 @@
+<%= form_for(@can) do |f| %>
+  <p>
+    <%= f.label :short_description %><br />
+    <%= f.text_field :short_description %>
+  </p>	
+  <p>
+    <%= f.label :long_description %><br />
+	<%= f.text_area :long_description %>
+  </p>	
+  <p>
+    <%= f.submit "Create Can" %>
+  </p>
+<% end %>
