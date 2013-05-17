@@ -13,10 +13,11 @@
   <%= yield %>
 <div>  
 
-<% if current_user %>
+<% if Rails.env.development? && current_user %>
   <%= current_user.id %>
   <%= current_user.login %>
   <%= current_user.remember_token %>
+  <%= debug(params) %>
 <% end %>
 
 </body>

@@ -2,18 +2,27 @@
   <p id="notice"><%= flash[:alert] %></p>
 <% end %>
 
+<h2>Welcome to Mutual Assistance Social NET!</h2>
 <h1>Sign In</h1>
 
-<%= form_tag do %>
-  <div>
-	<%= label_tag :login, 'Login:' %>
-	<%= text_field_tag :login, params[:login] %>
-  </div>
-  <div>
-	<%= label_tag :password, 'Password:' %>
-	<%= password_field_tag :password, params[:password] %>
-  </div>
-  <div>
-  <%= submit_tag "Login" %>
-  </div>
-<% end %>
+<div class="row">
+  <div class="span6 offset3">
+
+	<%= form_tag do %>
+	  <div>
+		<%= label_tag :login, 'Login:' %>
+		<%= text_field_tag :login, params[:login] %>
+	  </div>
+	  <div>
+		<%= label_tag :password, 'Password:' %>
+		<%= password_field_tag :password, params[:password] %>
+	  </div>
+	  <div>
+	  <%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
+	  </div>
+	  
+	  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+	<% end %>
+
+</div>
+</div>

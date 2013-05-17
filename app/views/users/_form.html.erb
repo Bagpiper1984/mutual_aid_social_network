@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="span6 offset3">
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -12,58 +15,62 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :login %><br />
+    <%= f.label :login, "Login*:" %><br />
     <%= f.text_field :login %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, "Password*:" %><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "Password Confirmation*:" %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "Name*:" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :surname %><br />
+    <%= f.label :surname, "Surname:" %><br />
     <%= f.text_field :surname %>
   </div>
   <div class="field">
-    <%= f.label :date_of_birth %><br />
+    <%= f.label :date_of_birth, "Date Of Birth:" %><br />
     <%= f.date_select :date_of_birth %>
   </div>
   <div class="field">
-    <%= f.label :country %><br />
+    <%= f.label :country, "Country:" %><br />
     <%= f.text_field :country %>
   </div>
   <div class="field">
-    <%= f.label :city %><br />
+    <%= f.label :city, "City:" %><br />
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :education %><br />
+    <%= f.label :education, "Education:" %><br />
     <%= f.text_field :education %>
   </div>
   <div class="field">
-    <%= f.label :member_of_volunteer_organizations %><br />
+    <%= f.label :member_of_volunteer_organizations, "Member Of Volunteer Organizations:" %><br />
     <%= f.text_field :member_of_volunteer_organizations %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "E-mail*:" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :phone_number %><br />
+    <%= f.label :phone_number, "Phone Number:" %><br />
     <%= f.text_field :phone_number %>
   </div>
   <div class="field">
-    <%= f.label :other_contacts %><br />
+    <%= f.label :other_contacts, "Other Contacts:" %><br />
     <%= f.text_field :other_contacts %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Sign Up", class: "btn btn-large btn-primary" %>
   </div>
 <% end %>
+* fields must be fill in<br />
+
+  </div>
+</div>
