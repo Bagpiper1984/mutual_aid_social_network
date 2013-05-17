@@ -1,68 +1,78 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <aside class="span4">
+    <section>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Surname:</b>
-  <%= @user.surname %>
-</p>
+		<p>
+		  <b>Name:</b>
+		  <%= @user.name %>
+		</p>
 
-<p>
-  <b>Date of birth:</b>
-  <%= @user.date_of_birth %>
-</p>
+		<p>
+		  <b>Surname:</b>
+		  <%= @user.surname %>
+		</p>
 
-<p>
-  <b>Country:</b>
-  <%= @user.country %>
-</p>
+		<p>
+		  <b>Date of birth:</b>
+		  <%= @user.date_of_birth %>
+		</p>
 
-<p>
-  <b>City:</b>
-  <%= @user.city %>
-</p>
+		<p>
+		  <b>Country:</b>
+		  <%= @user.country %>
+		</p>
 
-<p>
-  <b>Education:</b>
-  <%= @user.education %>
-</p>
+		<p>
+		  <b>City:</b>
+		  <%= @user.city %>
+		</p>
 
-<p>
-  <b>Member of volunteer organizations:</b>
-  <%= @user.member_of_volunteer_organizations %>
-</p>
+		<p>
+		  <b>Education:</b>
+		  <%= @user.education %>
+		</p>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+		<p>
+		  <b>Member of volunteer organizations:</b>
+		  <%= @user.member_of_volunteer_organizations %>
+		</p>
 
-<p>
-  <b>Phone number:</b>
-  <%= @user.phone_number %>
-</p>
+		<p>
+		  <b>Email:</b>
+		  <%= @user.email %>
+		</p>
 
-<p>
-  <b>Other contacts:</b>
-  <%= @user.other_contacts %>
-</p>
+		<p>
+		  <b>Phone number:</b>
+		  <%= @user.phone_number %>
+		</p>
 
-<h3>I need:</h3>
-<% if @user.needs.any? %>
-  <ol>
-    <%= render @needs %>
-  </ol>
-<% end %>
+		<p>
+		  <b>Other contacts:</b>
+		  <%= @user.other_contacts %>
+		</p>
+		
+		
+	</section>
+  </aside>
 
-<h3>I can:</h3>
-<% if @user.cans.any? %>
-  <ol>
-    <%= render @cans %>
-  </ol>
-<% end %>
+		<h3>I need:</h3>
+		<% if @user.needs.any? %>
+		  <ol>
+			<%= render @needs %>
+		  </ol>
+		<% end %>
+
+		<h3>I can:</h3>
+		<% if @user.cans.any? %>
+		  <ol>
+			<%= render @cans %>
+		  </ol>
+		<% end %>
+
+</div>		
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
