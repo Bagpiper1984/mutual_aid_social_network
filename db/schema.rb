@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517174527) do
+ActiveRecord::Schema.define(:version => 20130517192512) do
 
   create_table "cans", :force => true do |t|
     t.integer  "user_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130517174527) do
     t.text     "long_description"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "sphere"
   end
 
   add_index "cans", ["user_id", "created_at"], :name => "index_cans_on_user_id_and_created_at"
