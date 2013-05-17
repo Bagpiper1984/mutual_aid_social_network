@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517031631) do
+ActiveRecord::Schema.define(:version => 20130517174527) do
 
   create_table "cans", :force => true do |t|
     t.integer  "user_id"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(:version => 20130517031631) do
   end
 
   add_index "cans", ["user_id", "created_at"], :name => "index_cans_on_user_id_and_created_at"
+
+  create_table "needs", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "short_description"
+    t.string   "sphere"
+    t.string   "long_description"
+    t.date     "deadline"
+    t.boolean  "executed"
+    t.integer  "who_executed"
+    t.date     "when_executed"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "needs", ["user_id", "created_at"], :name => "index_needs_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "login"

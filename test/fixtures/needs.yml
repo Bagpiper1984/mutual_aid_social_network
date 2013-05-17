@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  short_description: MyString
+  sphere: MyString
+  long_description: MyString
+  deadline: 2013-05-17
+  executed: false
+  who_executed: 1
+  when_executed: 2013-05-17
+
+two:
+  user_id: 1
+  short_description: MyString
+  sphere: MyString
+  long_description: MyString
+  deadline: 2013-05-17
+  executed: false
+  who_executed: 1
+  when_executed: 2013-05-17

@@ -50,6 +50,13 @@
   <%= @user.other_contacts %>
 </p>
 
+<h3>I need:</h3>
+<% if @user.needs.any? %>
+  <ol>
+    <%= render @needs %>
+  </ol>
+<% end %>
+
 <h3>I can:</h3>
 <% if @user.cans.any? %>
   <ol>

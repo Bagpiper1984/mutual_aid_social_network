@@ -1,0 +1,37 @@
+<li>
+  <p>
+    Short description: <%= need.short_description %>
+  </p>
+
+  <p>
+    Sphere: <%= need.sphere %>
+  </p>
+  
+  <p>  
+    Long description: <%= need.long_description %>
+  </p>
+  
+  <p>  
+    Deadline: <%= need.deadline %>
+  </p>
+  
+  <% if need.executed? %>
+    <p> 
+	  Executed! 
+	</p>
+	
+	<p>  
+      Who executed: <%= need.who_executed %>
+    </p>
+	
+	<p>  
+      When executed,: <%= need.when_executed %>
+    </p>
+  <% end %>
+  
+  <% if current_user?(need.user) %>
+    <%= link_to "edit", edit_need_path(need) %> |
+    <%= link_to "delete", need, method: :delete,
+                                     data: { confirm: "You sure?" } %>
+  <% end %>
+</li>
