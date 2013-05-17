@@ -22,7 +22,7 @@
   </p>
   <p>
     <%= f.label :who_executed %><br />
-	<%= f.text_field :who_executed %>
+	<%= f.select :who_executed, @users %>
   </p>	
   <p>
     <%= f.label :when_executed %><br />

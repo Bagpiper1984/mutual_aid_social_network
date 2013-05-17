@@ -6,6 +6,7 @@ class NeedsController < ApplicationController
   end
   
   def edit
+    @users = User.all
     @need = Need.find(params[:id])
   end
 
