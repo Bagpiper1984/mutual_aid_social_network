@@ -2,6 +2,7 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
+	  <%= link_to "Hello, #{current_user.name + " " + current_user.surname}", user_path(current_user), class: "brand" %>
 	  <nav>
 	  	<ul class="nav pull-right">
 		  <% if signed_in? %>
