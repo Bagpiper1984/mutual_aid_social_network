@@ -36,7 +36,7 @@
   </div>
   <div class="field">
     <%= f.label :date_of_birth, "Date Of Birth:" %><br />
-    <%= f.date_select :date_of_birth %>
+    <%= f.date_select :date_of_birth, order: [:day, :month, :year], start_year: 1900 %>
   </div>
   <div class="field">
     <%= f.label :country, "Country:" %><br />

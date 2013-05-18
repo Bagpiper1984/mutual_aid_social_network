@@ -13,7 +13,7 @@
   </p>	
   <p>
     <%= f.label :deadline %><br />
-	<%= f.date_select :deadline %>
+	<%= f.date_select :deadline, :order => [:day, :month, :year] %>
   </p>
   <p>
     <%= f.submit "Create Need" %>

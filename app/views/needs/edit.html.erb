@@ -13,7 +13,7 @@
   </p>	
   <p>
     <%= f.label :deadline %><br />
-	<%= f.date_select :deadline %>
+	<%= f.date_select :deadline, :order => [:day, :month, :year] %>
   </p>
     <%= f.label :executed %><br />
     <%= f.check_box :executed %>
@@ -22,11 +22,11 @@
   </p>
   <p>
     <%= f.label :who_executed %><br />
-	<%= f.select :who_executed, @users %>
+	<%= f.select :who_executed, users_names %>
   </p>	
   <p>
     <%= f.label :when_executed %><br />
-	<%= f.date_select :when_executed %>
+	<%= f.date_select :when_executed, :order => [:day, :month, :year] %>
   </p>
   <p>
     <%= f.submit "Update Need" %>

@@ -37,4 +37,10 @@ module SessionsHelper
 	  redirect_to signin_url, notice: "Please sign in."
 	end
   end
+  
+  def users_names
+    names = []
+    @users.each { |user| names << user.name + " " + user.surname }
+	names
+  end
 end
