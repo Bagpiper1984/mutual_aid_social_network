@@ -20,11 +20,15 @@
 				<% end %>
 			  </aside>
 			  <div class="span8">
-				<%= user.needs.last.short_description %>   <%= user.needs.last.sphere %><br />
-				<%= user.needs.last.long_description %> <br />
+				<% if user.needs.any? %>
+				  <%= user.needs.last.short_description %>   <%= user.needs.last.sphere %><br />
+				  <%= user.needs.last.long_description %> <br />
+				<% end %>  
 				<br />
-				<%= user.cans.last.short_description %>   <%= user.cans.last.sphere %><br />
-				<%= user.cans.last.long_description %> <br />
+				<% if user.cans.any? %>
+				  <%= user.cans.last.short_description %>   <%= user.cans.last.sphere %><br />
+				  <%= user.cans.last.long_description %> <br />
+				<% end %>  
 			  </div>
 			</div>
 		  </li>	
