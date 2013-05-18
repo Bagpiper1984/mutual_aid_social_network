@@ -1,14 +1,14 @@
 <li>
   <p>
-    Short description: <%= can.short_description %>
+    <strong>Short description: </strong><%= can.short_description %>
   </p>
   
   <p>
-    Sphere: <%= can.sphere %>
+    <strong>Sphere: </strong><%= can.sphere %>
   </p>
 
   <p>  
-    Long description: <%= can.long_description %>
+    <strong>Long description: </strong><%= can.long_description %>
   </p>
   <% if current_user?(can.user) %>
     <%= link_to "edit", edit_can_path(can) %> |

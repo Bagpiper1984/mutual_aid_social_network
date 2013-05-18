@@ -9,9 +9,13 @@
 </head>
 <body>
 
+<%= render 'layouts/header' %>
+
 <div class="container">
   <%= yield %>
 <div>  
+
+<%= render 'layouts/footer' %>
 
 <% if Rails.env.development? && current_user %>
   <%= current_user.id %>

@@ -1,31 +1,31 @@
 <li>
   <p>
-    Short description: <%= need.short_description %>
+    <strong>Short description: </strong><%= need.short_description %>
   </p>
 
   <p>
-    Sphere: <%= need.sphere %>
+    <strong>Sphere: </strong><%= need.sphere %>
   </p>
   
   <p>  
-    Long description: <%= need.long_description %>
+    <strong>Long description: </strong><%= need.long_description %>
   </p>
   
   <p>  
-    Deadline: <%= need.deadline %>
+    <strong>Deadline: </strong><%= need.deadline %>
   </p>
   
   <% if need.executed? %>
     <p> 
-	  Executed! 
+	  <strong>Executed!</strong> 
 	</p>
 	
 	<p>  
-      Who executed: <%= need.who_executed %>
+      <strong>Who executed:</strong> <%= need.who_executed %>
     </p>
 	
 	<p>  
-      When executed,: <%= need.when_executed %>
+      <strong>When executed: </strong><%= need.when_executed %>
     </p>
   <% end %>
   

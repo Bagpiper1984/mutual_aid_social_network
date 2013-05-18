@@ -1,45 +1,33 @@
-<h1>Listing users</h1>
+<h1>Users</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Surname</th>
-    <th>Date of birth</th>
-    <th>Country</th>
-    <th>City</th>
-    <th>Education</th>
-    <th>Member of volunteer organizations</th>
-    <th>Email</th>
-    <th>Phone number</th>
-    <th>Other contacts</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+	<ul class="users">
+		<% @users.each do |user| %>
+		  <li>
+		    <div class="row">
+			  <aside class="span4">
+				<%= link_to user.name + " " + user.surname, user %><br />
+				<%= user.date_of_birth %>
+				<%= user.country %>
+				<%= user.city %>
+				<%= user.education %><br />
+				<%= user.member_of_volunteer_organizations %><br />
+				<%= user.email %>
+				<%= user.phone_number %>
+				<%= user.other_contacts %><br />
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.surname %></td>
-    <td><%= user.date_of_birth %></td>
-    <td><%= user.country %></td>
-    <td><%= user.city %></td>
-    <td><%= user.education %></td>
-    <td><%= user.member_of_volunteer_organizations %></td>
-    <td><%= user.email %></td>
-    <td><%= user.phone_number %></td>
-    <td><%= user.other_contacts %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td>
-	  <% if current_user.admin? && !current_user?(user) %>
-	    <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
-		<% end %>
-	</td>
-  </tr>
-<% end %>
-</table>
+				<% if current_user.admin? && !current_user?(user) %>
+				  <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+				<% end %>
+			  </aside>
+			  <div class="span8">
+				<%= user.needs.last.short_description %>   <%= user.needs.last.sphere %><br />
+				<%= user.needs.last.long_description %> <br />
+				<br />
+				<%= user.cans.last.short_description %>   <%= user.cans.last.sphere %><br />
+				<%= user.cans.last.long_description %> <br />
+			  </div>
+			</div>
+		  </li>	
+	    <% end %>
+	</ul>
 
-<br />
-
-<%= link_to 'New User', new_user_path %>

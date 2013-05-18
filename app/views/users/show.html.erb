@@ -54,25 +54,28 @@
 		  <%= @user.other_contacts %>
 		</p>
 		
-		
+		<%= link_to 'Create Can', new_can_path %> |
+		<%= link_to 'Create Need', new_need_path %> |
+		<%= link_to 'Edit Profile', edit_user_path(@user) %>
+
 	</section>
   </aside>
 
+  <div class="span8">
+
 		<h3>I need:</h3>
 		<% if @user.needs.any? %>
-		  <ol>
+		  <ol class="cans-needs">
 			<%= render @needs %>
 		  </ol>
 		<% end %>
 
 		<h3>I can:</h3>
 		<% if @user.cans.any? %>
-		  <ol>
+		  <ol class="cans-needs">
 			<%= render @cans %>
 		  </ol>
 		<% end %>
 
-</div>		
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  </div>
+</div>
