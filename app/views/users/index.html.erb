@@ -22,12 +22,12 @@
 			  <div class="span8">
 				<% if user.needs.any? %>
 				  <%= user.needs.last.short_description %>   <%= user.needs.last.sphere %><br />
-				  <%= user.needs.last.long_description %> <br />
+				  <%= truncate(strip_tags(user.needs.last.long_description), length: 80) %> <br />
 				<% end %>  
 				<br />
 				<% if user.cans.any? %>
 				  <%= user.cans.last.short_description %>   <%= user.cans.last.sphere %><br />
-				  <%= user.cans.last.long_description %> <br />
+				  <%= truncate(strip_tags(user.cans.last.long_description), length: 80) %> <br />
 				<% end %>  
 			  </div>
 			</div>
