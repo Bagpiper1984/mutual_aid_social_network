@@ -12,7 +12,7 @@
   </p>
   
   <p>  
-    <strong>Deadline: </strong><%= need.deadline %>
+    <strong>Deadline: </strong><%= need.deadline.to_s(:ru_datetime) %>
   </p>
   
   <% if need.executed? %>
@@ -25,7 +25,7 @@
     </p>
 	
 	<p>  
-      <strong>When executed: </strong><%= need.when_executed %>
+      <strong>When executed: </strong><%= need.when_executed.to_s(:ru_datetime) %>
     </p>
   <% end %>
   

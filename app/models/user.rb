@@ -18,6 +18,11 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+    
+  def admin?
+    admin
+  end
+  
   private
 	def ensure_an_admin_remains
 	  if User.count.zero?
@@ -28,5 +33,4 @@ class User < ActiveRecord::Base
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end
-  
 end	

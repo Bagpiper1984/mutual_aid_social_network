@@ -40,7 +40,7 @@ module SessionsHelper
   
   def users_names
     names = []
-    @users.each { |user| names << user.name + " " + user.surname }
+    @users.each { |user| names << user.id.to_s + " " + user.name + " " + user.surname }
 	names
   end
 end

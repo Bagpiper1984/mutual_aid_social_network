@@ -6,7 +6,7 @@
 		    <div class="row">
 			  <aside class="span4">
 				<%= link_to user.name + " " + user.surname, user %><br />
-				<%= user.date_of_birth %>
+				<%= user.date_of_birth.to_s(:ru_datetime) %>
 				<%= user.country %>
 				<%= user.city %>
 				<%= user.education %><br />
