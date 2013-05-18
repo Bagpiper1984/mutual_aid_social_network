@@ -1,4 +1,10 @@
 MutualAidSocialNetwork::Application.routes.draw do
+  get "static_pages/about"
+
+  get "static_pages/help"
+
+  get "static_pages/contact"
+
   match '/signup',  to: 'users#new'
   controller :sessions do
 	get 'signin' => :new
