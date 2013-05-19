@@ -20,6 +20,37 @@ en:
   Help: "Help"
   
   Search: "Search"
+ 
+  Name: "Name"
+  Surname: "Surname"
+  Date_of_birth: "Date of birth"
+  Country: "Country"
+  City: "City"
+  Education: "Education"
+  Member_of_volunteer_organizations: "Member of volunteer organizations"
+  Email: "Email"
+  Phone_number: "Phone number"
+  Other_contacts: "Other contacts"
+  Create_Can: "Create Can"
+  Create_Need: "Create Need"
+  Edit_Profile: "Edit Profile"
+  
+  I_need: "I need"
+  I_can: "I can"
+  
+  Destroy: "Destroy"
+  Are_you_sure?: "Are you sure?"
+  
+  Short_description: "Short description"
+  Sphere: "Sphere"
+  Long_description: "Long description:"
+  edit: "edit"
+  delete: "delete"
+  
+  Deadline: "Deadline"
+  Executed!: "Executed!"
+  Who_executed: "Who_executed"
+  When_executed: "When_executed"
   
   MODES:
     - "Need"
@@ -32,3 +63,4 @@ en:
     - "Ideas for a creative"
     - "Scientific activity"
     - "Other"
+  

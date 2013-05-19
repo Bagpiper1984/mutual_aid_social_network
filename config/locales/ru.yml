@@ -19,6 +19,37 @@ ru:
   Sign_out: "Выйти"
   Help: "Помощь"
   Search: "Поиск"
+
+  Name: "Имя"
+  Surname: "Фамилия"
+  Date_of_birth: "Дата рождения"
+  Country: "Страна"
+  City: "Город"
+  Education: "Образование"
+  Member_of_volunteer_organizations: "Состою в волонтерских организациях"
+  Email: "Email"
+  Phone_number: "Номер телефона"
+  Other_contacts: "Другие контакты"
+  Create_Can: "Создать 'Я могу'"
+  Create_Need: "Создать 'Мне нужно'"
+  Edit_Profile: "Настройки"
+  
+  I_need: "Мне нужно"
+  I_can: "Я могу"
+  
+  Destroy: "Удалить пользователя"
+  Are_you_sure?: "Вы уверены?"
+  
+  Short_description: "Короткое описание"
+  Sphere: "Область"
+  Long_description: "Полное описание"
+  edit: "Редактировать"
+  delete: "Удалить"
+  
+  Deadline: "Сроки"
+  Executed!: "Выполнено!"
+  Who_executed: "Кто выполнил"
+  When_executed: "Когда выполнено"
   
   MODES:
     - "Нужно"

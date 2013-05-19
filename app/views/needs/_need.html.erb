@@ -1,37 +1,37 @@
 <li>
   <p>
-    <strong>Short description: </strong><%= need.short_description %>
+    <strong><%= t(:Short_description) %> </strong><%= need.short_description %>
   </p>
 
   <p>
-    <strong>Sphere: </strong><%= need.sphere %>
+    <strong><%= t(:Sphere) %> </strong><%= need.sphere %>
   </p>
   
   <p>  
-    <strong>Long description: </strong><%= need.long_description %>
+    <strong><%= t(:Long_description) %> </strong><%= need.long_description %>
   </p>
   
   <p>  
-    <strong>Deadline: </strong><%= need.deadline.to_s(:ru_datetime) %>
+    <strong><%= t(:Deadline) %> </strong><%= need.deadline.to_s(:ru_datetime) %>
   </p>
   
   <% if need.executed? %>
     <p> 
-	  <strong>Executed!</strong> 
+	  <strong><%= t(:Executed!) %> </strong> 
 	</p>
 	
 	<p>  
-      <strong>Who executed:</strong> <%= User.find(need.who_executed).name + " " + User.find(need.who_executed).surname %>
+      <strong><%= t(:Who_executed) %> </strong> <%= User.find(need.who_executed).name + " " + User.find(need.who_executed).surname %>
     </p>
 	
 	<p>  
-      <strong>When executed: </strong><%= need.when_executed.to_s(:ru_datetime) %>
+      <strong><%= t(:When_executed) %> </strong><%= need.when_executed.to_s(:ru_datetime) %>
     </p>
   <% end %>
   
   <% if current_user?(need.user) %>
-    <%= link_to "edit", edit_need_path(need) %> |
-    <%= link_to "delete", need, method: :delete,
-                                     data: { confirm: "You sure?" } %>
+    <%= link_to t(:edit), edit_need_path(need) %> |
+    <%= link_to t(:delete), need, method: :delete,
+                                     data: { confirm: t(:Are_you_sure?) } %>
   <% end %>
 </li>

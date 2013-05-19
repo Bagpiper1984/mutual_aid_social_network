@@ -5,72 +5,72 @@
 		<p id="notice"><%= notice %></p>
 
 		<p>
-		  <b>Name:</b>
+		  <b><%= t(:Name)  %></b>
 		  <%= @user.name %>
 		</p>
 
 		<p>
-		  <b>Surname:</b>
+		  <b><%= t(:Surname) %></b>
 		  <%= @user.surname %>
 		</p>
 
 		<p>
-		  <b>Date of birth:</b>
+		  <b><%= t(:Date_of_birth) %></b>
 		  <%= @user.date_of_birth.to_s(:ru_datetime) %>
 		</p>
 
 		<p>
-		  <b>Country:</b>
+		  <b><%= t(:Country) %></b>
 		  <%= @user.country %>
 		</p>
 
 		<p>
-		  <b>City:</b>
+		  <b><%= t(:City) %></b>
 		  <%= @user.city %>
 		</p>
 
 		<p>
-		  <b>Education:</b>
+		  <b><%= t(:Education) %></b>
 		  <%= @user.education %>
 		</p>
 
 		<p>
-		  <b>Member of volunteer organizations:</b>
+		  <b><%= t(:Member_of_volunteer_organizations) %></b>
 		  <%= @user.member_of_volunteer_organizations %>
 		</p>
 
 		<p>
-		  <b>Email:</b>
+		  <b><%= t(:Email) %></b>
 		  <%= @user.email %>
 		</p>
 
 		<p>
-		  <b>Phone number:</b>
+		  <b><%= t(:Phone_number) %></b>
 		  <%= @user.phone_number %>
 		</p>
 
 		<p>
-		  <b>Other contacts:</b>
+		  <b><%= t(:Other_contacts) %></b>
 		  <%= @user.other_contacts %>
 		</p>
 		
-		<%= link_to 'Create Can', new_can_path %> |
-		<%= link_to 'Create Need', new_need_path %> |
-		<%= link_to 'Edit Profile', edit_user_path(@user) %>
+		<%= link_to t(:Create_Can), new_can_path %> |
+		<%= link_to t(:Create_Need), new_need_path %> |
+		<%= link_to t(:Edit_Profile), edit_user_path(@user) %>
 
 	</section>
   </aside>
 
   <div class="span8">
 
-		<h3>I need:</h3>
+		<h3><%= t(:I_need) %></h3>
 		<% if @user.needs.any? %>
 		  <ol class="cans-needs">
 			<%= render @needs %>
 		  </ol>
 		<% end %>
 
-		<h3>I can:</h3>
+		<h3><%= t(:I_can) %></h3>
 		<% if @user.cans.any? %>
 		  <ol class="cans-needs">
 			<%= render @cans %>

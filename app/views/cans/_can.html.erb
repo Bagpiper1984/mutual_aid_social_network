@@ -1,18 +1,18 @@
 <li>
   <p>
-    <strong>Short description: </strong><%= can.short_description %>
+    <strong><%= t(:Short_description) %> </strong><%= can.short_description %>
   </p>
   
   <p>
-    <strong>Sphere: </strong><%= can.sphere %>
+    <strong><%= t(:Sphere) %></strong> <%= can.sphere %>
   </p>
 
   <p>  
-    <strong>Long description: </strong><%= can.long_description %>
+    <strong><%= t(:Long_description) %> </strong><%= can.long_description %>
   </p>
   <% if current_user?(can.user) %>
-    <%= link_to "edit", edit_can_path(can) %> |
-    <%= link_to "delete", can, method: :delete,
-                                     data: { confirm: "You sure?" } %>
+    <%= link_to t(:edit), edit_can_path(can) %> |
+    <%= link_to t(:delete), can, method: :delete,
+                                     data: { confirm: t(:Are_you_sure?) } %>
   <% end %>
 </li>
