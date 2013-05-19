@@ -21,7 +21,7 @@
 	</p>
 	
 	<p>  
-      <strong>Who executed:</strong> <%= need.who_executed %>
+      <strong>Who executed:</strong> <%= User.find(need.who_executed).name + " " + User.find(need.who_executed).surname %>
     </p>
 	
 	<p>  
