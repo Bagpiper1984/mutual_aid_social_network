@@ -1,23 +1,27 @@
 MutualAidSocialNetwork::Application.routes.draw do  
-  get "records/index"
+  scope '(:locale)' do
+    get "records/index"
 
-  get "static_pages/about"
+    get "static_pages/about"
 
-  get "static_pages/help"
+    get "static_pages/help"
 
-  get "static_pages/contact"
+    get "static_pages/contact"
 
-  match '/signup',  to: 'users#new'
-  controller :sessions do
-	get 'signin' => :new
-	post 'signin' => :create
-	delete 'signout' => :destroy
+	match '/signup',  to: 'users#new'
+	controller :sessions do
+	  get 'signin' => :new
+	  post 'signin' => :create
+	  delete 'signout' => :destroy
+	end
+
+    resources :users
+    resources :cans, excpect: [:index]
+    resources :needs, excpect: [:index]
+	
+	root :to => 'sessions#new'
+	
   end
-
-  resources :users
-  resources :cans, excpect: [:index]
-  resources :needs, excpect: [:index]
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -65,10 +69,6 @@ MutualAidSocialNetwork::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  root :to => 'sessions#new'
 
   # See how all your routes lay out with "rake routes"
 
