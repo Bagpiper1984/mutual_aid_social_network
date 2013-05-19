@@ -30,6 +30,9 @@
 		  <li class="divider"></li>
 		  <li><%= link_to t(:Help), static_pages_help_path %></li>
 		  <li><%= link_to t(:About), static_pages_about_path %></li>
+		  <li class="divider"></li>
+		  <li><%= link_to t(:russian), users_path(:locale => :ru) %></li>
+          <li><%= link_to t(:english), users_path(:locale => :en) %><li>
 		</ul>
 	  </nav>
 	</div>

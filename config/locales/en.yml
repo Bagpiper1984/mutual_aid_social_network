@@ -89,6 +89,9 @@ en:
   Contact: "Contact"
   Write_me: "Write me"
   
+  russian: "Russian"
+  english: "English"
+  
   MODES:
     - "Need"
     - "Can"
