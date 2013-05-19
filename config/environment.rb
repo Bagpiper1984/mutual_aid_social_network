@@ -4,4 +4,4 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 MutualAidSocialNetwork::Application.initialize!
 
-Time::DATE_FORMATS[:ru_datetime] = "%Y.%m.%d"
+Time::DATE_FORMATS[:ru_datetime] = "%d.%m.%Y"

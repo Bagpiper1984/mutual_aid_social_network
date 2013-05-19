@@ -1,5 +1,5 @@
 MutualAidSocialNetwork::Application.routes.draw do  
-  scope '(:locale)' do
+  scope "(:locale)", locale: /en|ru/ do	
     get "records/index"
 
     get "static_pages/about"
@@ -20,7 +20,6 @@ MutualAidSocialNetwork::Application.routes.draw do
     resources :needs, excpect: [:index]
 	
 	root :to => 'sessions#new'
-	
   end
 
   # The priority is based upon order of creation:

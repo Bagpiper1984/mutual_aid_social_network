@@ -1,0 +1,10 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  welcome_to_mutual_assistance_social_NET!: "Добро пожаловать в Социальную Сеть Взаимой Помощи!"
+  Login: "Логин"
+  Password: "Пароль"
+  Sign_In: "Войти"
+  Sign_up_now!: "Зарегистрироваться сейчас!"
+  New_user?: "Новый пользователь?"
