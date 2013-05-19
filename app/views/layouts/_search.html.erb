@@ -1,7 +1,7 @@
 <%= form_tag records_index_path, method: :get do %>
 	  <div class="search offset7">
-        <%= select_tag "mode", options_for_select(Need::MODES, params[:mode]) %>
-	    <%= select_tag "search", options_for_select(Need::SPHERE_TYPES, params[:search]) %>
-		<%= submit_tag "Search", name: nil, class: "btn btn-search" %>
+        <%= select_tag "mode", options_for_select(Need::I18n.translate(:MODES), params[:mode]) %>
+	    <%= select_tag "search", options_for_select(Need::I18n.translate(:SPHERE_TYPES), params[:search]) %>
+		<%= submit_tag t(:Search), name: nil, class: "btn btn-search" %>
 	  </div>
 <% end %>

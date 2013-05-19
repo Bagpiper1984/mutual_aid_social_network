@@ -8,3 +8,27 @@ en:
   Sign_In: "Sign In"
   Sign_up_now!: "Sign Up Now!"
   New_user?: "New User?"
+  
+  mutual_assistance_social_NET: "Mutual Assistance Social NET"
+  About: "About"
+  Contact: "Contact"
+  
+  Hello: "Hello"
+  Users: "Users"
+  Settings: "Settings"
+  Sign_out: "Sign out"
+  Help: "Help"
+  
+  Search: "Search"
+  
+  MODES:
+    - "Need"
+    - "Can"
+
+  SPHERE_TYPES:
+    - "Psychological assistance"
+    - "Household"
+    - "Study"
+    - "Ideas for a creative"
+    - "Scientific activity"
+    - "Other"

@@ -3,14 +3,14 @@
   <div class="navbar-inner">
     <div class="container">
 	  <% if current_user != nil %>
-	    <%= link_to "Hello, #{current_user.name + " " + current_user.surname}", user_path(current_user), class: "brand" %>
+	    <%= link_to t(:Hello) + ", #{current_user.name + " " + current_user.surname}", user_path(current_user), class: "brand" %>
 	  <% end %>
 	  <nav>
 	  	<ul class="nav pull-right">
 		  <% if signed_in? %>
-		    <li><%= link_to "Users", users_path %></li>
-            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-			<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+		    <li><%= link_to t(:Users), users_path %></li>
+            <li><%= link_to t(:Settings), edit_user_path(current_user) %></li>
+			<li><%= link_to t(:Sign_out), signout_path, method: "delete" %></li>
             <!--<li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b class="caret"></b>
@@ -20,16 +20,16 @@
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                  <%= link_to "Sign_out", signout_path, method: "delete" %>
                 </li>
               </ul>
             </li>-->
 		  <% else %>
-			<li><%= link_to "Sign In", signin_path %></li>	
+			<li><%= link_to t(:Sign_In), signin_path %></li>	
 		  <% end %>
 		  <li class="divider"></li>
-		  <li><%= link_to "Help", static_pages_help_path %></li>
-		  <li><%= link_to "About", static_pages_about_path %></li>
+		  <li><%= link_to t(:Help), static_pages_help_path %></li>
+		  <li><%= link_to t(:About), static_pages_about_path %></li>
 		</ul>
 	  </nav>
 	</div>
