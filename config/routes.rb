@@ -18,10 +18,11 @@ MutualAidSocialNetwork::Application.routes.draw do
 
     resources :users
     resources :cans, excpect: [:index]
-    resources :needs, excpect: [:index]
+    resources :needs, excpect: [:index]  
+    
+	root :to => 'sessions#new'
   end
-  
-  root :to => 'sessions#new'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

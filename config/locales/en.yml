@@ -2,3 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  welcome_to_mutual_assistance_social_NET!: "Welcome To Mutual Assistance Social NET!"
+  Login: "Login"
+  Password: "Password"
+  Sign_In: "Sign In"
+  Sign_up_now!: "Sign Up Now!"
+  New_user?: "New User?"
