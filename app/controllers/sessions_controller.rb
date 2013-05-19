@@ -22,6 +22,6 @@ class SessionsController < ApplicationController
     cookies.delete(:remember_token)
 	user=nil
 	#session[:user_id] = nil
-	redirect_to users_url#, notice: "Сеанс работы завершен"
+	redirect_to root_url#, notice: "Сеанс работы завершен"
   end
 end

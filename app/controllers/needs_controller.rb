@@ -1,6 +1,15 @@
 class NeedsController < ApplicationController
-  before_filter :signed_in_user, expect: [:index]
+  before_filter :signed_in_user
 
+  def index
+	  @needs = Need.all
+	
+	  respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @users }
+    end
+  end
+  
   def new
     @need = Need.new
   end

@@ -1,4 +1,6 @@
-MutualAidSocialNetwork::Application.routes.draw do
+MutualAidSocialNetwork::Application.routes.draw do  
+  get "records/index"
+
   get "static_pages/about"
 
   get "static_pages/help"

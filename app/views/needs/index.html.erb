@@ -1,0 +1,27 @@
+<h1>Needs</h1>
+
+	<ul class="users">
+		<% @needs.each do |need| %>
+		  <li>
+		    <div class="row">
+			  <aside class="span4">
+				<%= link_to need.user.name + " " + need.user.surname, need.user %><br />
+				<%= need.user.date_of_birth.to_s(:ru_datetime) %>
+				<%= need.user.country %>
+				<%= need.user.city %>
+				<%= need.user.education %><br />
+				<%= need.user.member_of_volunteer_organizations %><br />
+				<%= need.user.email %>
+				<%= need.user.phone_number %>
+				<%= need.user.other_contacts %><br />
+			  </aside>
+			  <div class="span8">
+				  <%= need.short_description %>   <%= need.sphere %><br />
+				  <%= need.long_description %> <br />
+				<br />
+			  </div>
+			</div>
+		  </li>	
+	    <% end %>
+	</ul>
+

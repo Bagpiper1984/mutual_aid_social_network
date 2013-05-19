@@ -1,0 +1,27 @@
+<h1>Cans</h1>
+
+	<ul class="users">
+		<% @cans.each do |can| %>
+		  <li>
+		    <div class="row">
+			  <aside class="span4">
+				<%= link_to can.user.name + " " + can.user.surname, can.user %><br />
+				<%= can.user.date_of_birth.to_s(:ru_datetime) %>
+				<%= can.user.country %>
+				<%= can.user.city %>
+				<%= can.user.education %><br />
+				<%= can.user.member_of_volunteer_organizations %><br />
+				<%= can.user.email %>
+				<%= can.user.phone_number %>
+				<%= can.user.other_contacts %><br />
+			  </aside>
+			  <div class="span8">
+				  <%= can.short_description %>   <%= can.sphere %><br />
+				  <%= can.long_description %> <br />
+				<br />
+			  </div>
+			</div>
+		  </li>	
+	    <% end %>
+	</ul>
+

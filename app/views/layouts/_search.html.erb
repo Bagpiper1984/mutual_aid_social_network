@@ -1,0 +1,5 @@
+<%= form_tag records_index_path, method: :get do %>
+	  <%= select_tag "mode", options_for_select(Need::MODES, params[:mode]) %>
+	  <%= select_tag "search", options_for_select(Need::SPHERE_TYPES, params[:search]) %>
+      <%= submit_tag "Search", name: nil, class: "btn btn-search" %> 
+<% end %>

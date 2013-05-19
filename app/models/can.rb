@@ -8,4 +8,12 @@ class Can < ActiveRecord::Base
   validates :user_id, presence: true
   
   default_scope order: 'cans.created_at DESC'
+    
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['sphere LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
 end

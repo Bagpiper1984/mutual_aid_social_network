@@ -1,6 +1,15 @@
 class CansController < ApplicationController
-  before_filter :signed_in_user, expect: [:index, :show]
+  before_filter :signed_in_user
 
+  def index
+      @cans = Can.all
+	
+	  respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @users }
+    end
+  end
+  
   def new
     @can = Can.new
   end
