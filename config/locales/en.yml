@@ -5,7 +5,9 @@ en:
   welcome_to_mutual_assistance_social_NET!: "Welcome To Mutual Assistance Social NET!"
   Login: "Login"
   Password: "Password"
+  Password_Confirmation: "Password Confirmation"
   Sign_In: "Sign In"
+  Sign_Up: "Sign Up"
   Sign_up_now!: "Sign Up Now!"
   New_user?: "New User?"
   
@@ -51,6 +53,41 @@ en:
   Executed!: "Executed!"
   Who_executed: "Who_executed"
   When_executed: "When_executed"
+  Users: "Users"
+  
+  Please_Sign_Up: "Please Sign Up"
+  All_Users: "All Users"
+  
+  Settings: "Settings"
+  fields_must_be_fill_in: "Fields must be fill in"
+  
+  short_description: "Short description"
+  sphere: "Sphere"
+  long_description: "Long description"
+  deadline: "Deadline"
+  executed: "Executed"
+  
+  Create_Can: "Create Can"
+  Update_Can: "Update Can"
+  
+  Create_Need: "Create Need"
+  Update_Need: "Update Need"
+  
+  Help: "Help"
+  In_Development: "In Development"
+  
+  about_text: "I hope this social net will help many people around the world. You can write this what you need and what you can and change contacts with other people"
+  Creator_Alexandr_Piskunov_aka_Reachy_Carol: "Creator Alexandr Piskunov aka Reachy Carol"
+  Thanks_to_Evgenija: "Thanks to Evgenija for her excellent councils"
+  Thanks_to_music_bands_and_musicians: "Thanks to music bands and musicians: Manowar, Korn, Evanescence, Human Waste Project, Skrillex, Lyapis Trubetskoy, Noize MC, Shot & Tihij, Postskriptum﻿ V.l.g., Melnitsa, Side Defect, Nervy and... Mozart)) which I have heared when develop this social net"
+  Thanks_for_my_friends: "Thanks for my friends"
+  and_last_but_not_least: "and last but not least"
+  Thanks_for_my_parents_and_my_aunt: "Thanks for my parents and my aunt"
+  Russia_Samara_2013: "Russia, Samara 2013"
+  or: "or"
+  
+  Contact: "Contact"
+  Write_me: "Write me"
   
   MODES:
     - "Need"

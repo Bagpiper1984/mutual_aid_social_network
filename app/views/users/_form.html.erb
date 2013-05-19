@@ -15,62 +15,62 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :login, "Login*:" %><br />
+    <%= f.label :login, t(:Login) + "*" %><br />
     <%= f.text_field :login %>
   </div>
   <div class="field">
-    <%= f.label :password, "Password*:" %><br />
+    <%= f.label :password, t(:Password) + "*:" %><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Password Confirmation*:" %><br />
+    <%= f.label :password_confirmation, t(:Password_Confirmation) + "*:" %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
-    <%= f.label :name, "Name*:" %><br />
+    <%= f.label :name, t(:Name) + "*:" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :surname, "Surname:" %><br />
+    <%= f.label :surname, t(:Surname) + ":" %><br />
     <%= f.text_field :surname %>
   </div>
   <div class="field">
-    <%= f.label :date_of_birth, "Date Of Birth:" %><br />
+    <%= f.label :date_of_birth, t(:Date_of_birth) + ":" %><br />
     <%= f.date_select :date_of_birth, order: [:day, :month, :year], start_year: 1900 %>
   </div>
   <div class="field">
-    <%= f.label :country, "Country:" %><br />
+    <%= f.label :country, t(:Country) + ":" %><br />
     <%= f.text_field :country %>
   </div>
   <div class="field">
-    <%= f.label :city, "City:" %><br />
+    <%= f.label :city, t(:City) + ":" %><br />
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :education, "Education:" %><br />
+    <%= f.label :education, t(:Education) + ":" %><br />
     <%= f.text_field :education %>
   </div>
   <div class="field">
-    <%= f.label :member_of_volunteer_organizations, "Member Of Volunteer Organizations:" %><br />
+    <%= f.label :member_of_volunteer_organizations, t(:Member_of_volunteer_organizations) + ":" %><br />
     <%= f.text_field :member_of_volunteer_organizations %>
   </div>
   <div class="field">
-    <%= f.label :email, "E-mail*:" %><br />
+    <%= f.label :email, t(:Email) + "*:" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :phone_number, "Phone Number:" %><br />
+    <%= f.label :phone_number, t(:Phone_number) + ":" %><br />
     <%= f.text_field :phone_number %>
   </div>
   <div class="field">
-    <%= f.label :other_contacts, "Other Contacts:" %><br />
+    <%= f.label :other_contacts, t(:Other_contacts) + ":" %><br />
     <%= f.text_field :other_contacts %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign Up", class: "btn btn-large btn-primary" %>
+    <%= f.submit t(:Sign_Up), class: "btn btn-large btn-primary" %>
   </div>
 <% end %>
-* fields must be fill in<br />
+* <%= t(:fields_must_be_fill_in) %><br />
 
   </div>
 </div>

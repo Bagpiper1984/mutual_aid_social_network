@@ -5,7 +5,9 @@ ru:
   welcome_to_mutual_assistance_social_NET!: "Добро пожаловать в Социальную Сеть Взаимой Помощи!"
   Login: "Логин"
   Password: "Пароль"
+  Password_Confirmation: "Подтверждение пароля"
   Sign_In: "Войти"
+  Sign_Up: "Зарегистрироваться"
   Sign_up_now!: "Зарегистрироваться сейчас!"
   New_user?: "Новый пользователь?"
   
@@ -50,6 +52,41 @@ ru:
   Executed!: "Выполнено!"
   Who_executed: "Кто выполнил"
   When_executed: "Когда выполнено"
+  Users: "Пользователи"
+  
+  Please_Sign_Up: "Пожалуйста зарегистрируйтесь"
+  All_Users: "Посмотреть всех пользователей"
+  
+  Settings: "Настройки"
+  fields_must_be_fill_in: "Поля должны быть заполнены"
+  
+  short_description: "Короткое описание"
+  sphere: "Сфера"
+  long_description: "Полное описание"
+  deadline: "Когда нужно"
+  executed: "Выполнено"
+  
+  Create_Can: "Создать 'Я могу'"
+  Update_Can: "Редактировать 'Я могу'"
+  
+  Create_Need: "Создать 'Мне нужно'"
+  Update_Need: "Редактировать 'Мне нужно'"
+  
+  Help: "Помощь"
+  In_Development: "В разоработке"
+  
+  about_text: "Я надеюсь, что эта Социальная Сеть большому количеству людей по всему миру. Вы можете написать здесь что вам нужно и что вы можете, и обменяться контактами с другими людьми"
+  Creator_Alexandr_Piskunov_aka_Reachy_Carol: "Создатель: Александр Пискунов aka Reachy Carol"
+  Thanks_to_Evgenija: "Спасибо Евгении за ее превосходные советы"
+  Thanks_to_music_bands_and_musicians: "Спасибо музыкальным группам и музыкантам, которых я слушал, когда разрабатывал эту социальнцю сеть: Manowar, Korn, Evanescence, Human Waste Project, Skrillex, Ляпис Трубецкой, Noize MC, Shot & Тихий, Postskriptum﻿ V.l.g., Мельница, Side Defect, Нервы и... Моцарт))"
+  Thanks_for_my_friends: "Спасибо моим друзьям"
+  and_last_but_not_least: "и наконец"
+  Thanks_for_my_parents_and_my_aunt: "Спасибо моим родителям и моей тёте"
+  Russia_Samara_2013: "Россия, Самара 2013"
+  
+  Contact: "Контакты"
+  Write_me: "Пишите мне"
+  or: "или"
   
   MODES:
     - "Нужно"
