@@ -1,4 +1,6 @@
-<h2><%= params[:mode] %></h2>s
+<% if params[:mode] %>
+  <h2><%= params[:mode] %>s</h2>
+<% end %>  
 
 	<ul class="users">
 		<% @records.each do |record| %>
