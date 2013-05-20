@@ -69,19 +69,19 @@
 
   <div class="span8">
 
-		<h3><%= t(:I_need) %></h3>
-		<% if @user.needs.any? %>
-		  <ol class="cans-needs">
-			<%= render @needs %>
-		  </ol>
-		<% end %>
+	<% if @user.needs.any? %>
+	  <h3><%= t(:I_need) %></h3>
+	  <ol class="cans-needs">
+		<%= render @needs %>
+	  </ol>
+	<% end %>
 
-		<h3><%= t(:I_can) %></h3>
-		<% if @user.cans.any? %>
-		  <ol class="cans-needs">
-			<%= render @cans %>
-		  </ol>
-		<% end %>
+	<% if @user.cans.any? %>
+	  <h3><%= t(:I_can) %></h3>
+	  <ol class="cans-needs">
+		<%= render @cans %>
+	  </ol>
+	<% end %>
 
   </div>
 </div>
