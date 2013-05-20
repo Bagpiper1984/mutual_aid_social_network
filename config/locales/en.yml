@@ -7,6 +7,7 @@ en:
   Password: "Password"
   Password_Confirmation: "Password Confirmation"
   Sign_In: "Sign In"
+  Apply: "Apply"
   Sign_Up: "Sign Up"
   Sign_up_now!: "Sign Up Now!"
   New_user?: "New User?"

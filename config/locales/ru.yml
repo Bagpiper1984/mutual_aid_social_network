@@ -7,6 +7,7 @@ ru:
   Password: "Пароль"
   Password_Confirmation: "Подтверждение пароля"
   Sign_In: "Войти"
+  Apply: "Применить"
   Sign_Up: "Зарегистрироваться"
   Sign_up_now!: "Зарегистрироваться сейчас!"
   New_user?: "Новый пользователь?"

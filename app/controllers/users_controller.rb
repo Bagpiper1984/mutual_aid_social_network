@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, except: [:new, :create]
+  before_filter :signed_in_user, only: [:index, :show, :edit, :update, :delete]
   before_filter :correct_user,   only: [:edit, :update]
   
   # GET /users
@@ -48,6 +48,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+	    sign_in @user
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
@@ -59,7 +60,7 @@ class UsersController < ApplicationController
 
   # PUT /users/1
   # PUT /users/1.json
-  def update
+  def update  
     respond_to do |format|
       if @user.update_attributes(params[:user])
 	    sign_in @user
