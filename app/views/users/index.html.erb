@@ -1,16 +1,18 @@
 <h1><%= t(:Users) %></h1>
 
-	<ul class="users">
+  	<ul class="users">
 		<% @users.each do |user| %>
-		  <li>
+		  <li id="user<%= user.id %>">
 		    <div class="row">
 			  <aside class="span4">
 				  <% if user.avatar_url != nil %>
-				    <div class="small_avatar">
+				    <div class="small_avatar" id="<%= user.id %>">
 				      <%= image_tag user.avatar_url.to_s, size: "125x75" %>
 					</div>
 				  <% end %> 
-				<%= link_to user.name + " " + user.surname, user %><br />
+				<div id="link<%= user.id %>">  
+				  <%= link_to user.name + " " + user.surname, user %><br />
+				</div>   
 				<%= user.date_of_birth.to_s(:ru_datetime) %>
 				<%= user.country %>
 				<%= user.city %>
