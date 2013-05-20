@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, except: :new
+  before_filter :signed_in_user, except: [:new, :create]
   before_filter :correct_user,   only: [:edit, :update]
   
   # GET /users

@@ -3,10 +3,12 @@
     <section>
 
 		<p id="notice"><%= notice %></p>
-
-		<p>
-		  <%= image_tag @user.avatar_url.to_s, size: "250x150" %>
-		</p>
+		
+		<% if @user.avatar_url != nil %>
+		  <p>
+		    <%= image_tag @user.avatar_url.to_s, size: "250x150" %>
+		  </p>
+		<% end %>
 		
 		<p>
 		  <b><%= t(:Name)  %></b>
