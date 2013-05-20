@@ -5,6 +5,11 @@
 		  <li>
 		    <div class="row">
 			  <aside class="span4">
+				<div class="small_avatar">
+				  <% if user.avatar_url != nil %>
+				    <%= image_tag user.avatar_url.to_s, size: "125x75" %>
+				  <% end %> 
+				</div>  	
 				<%= link_to user.name + " " + user.surname, user %><br />
 				<%= user.date_of_birth.to_s(:ru_datetime) %>
 				<%= user.country %>

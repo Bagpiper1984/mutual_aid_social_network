@@ -5,6 +5,10 @@
 		<p id="notice"><%= notice %></p>
 
 		<p>
+		  <%= image_tag @user.avatar_url.to_s, size: "250x150" %>
+		</p>
+		
+		<p>
 		  <b><%= t(:Name)  %></b>
 		  <%= @user.name %>
 		</p>
