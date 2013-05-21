@@ -62,9 +62,11 @@
 		  <%= @user.other_contacts %>
 		</p>
 		
-		<%= link_to t(:Create_Can), new_can_path %> |
-		<%= link_to t(:Create_Need), new_need_path %> |
-		<%= link_to t(:Edit_Profile), edit_user_path(@user) %>
+		<% if @user == current_user %>
+		  <%= link_to t(:Create_Can), new_can_path %> |
+		  <%= link_to t(:Create_Need), new_need_path %> |
+		  <%= link_to t(:Edit_Profile), edit_user_path(@user) %>
+		<% end %>  
 
 	</section>
   </aside>
