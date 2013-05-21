@@ -25,6 +25,7 @@ ru:
 
   Name: "Имя"
   Surname: "Фамилия"
+  Show_date_of_birth: "Показывать дату рождения"
   Date_of_birth: "Дата рождения"
   Country: "Страна"
   City: "Город"

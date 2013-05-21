@@ -26,6 +26,7 @@ en:
  
   Name: "Name"
   Surname: "Surname"
+  Show_date_of_birth: "Show date of birth"
   Date_of_birth: "Date of birth"
   Country: "Country"
   City: "City"

@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   before_save { |user| user.login = login.downcase }
   before_save :create_remember_token
   
-  attr_accessible :city, :country, :date_of_birth, :education, :email, :login, :member_of_volunteer_organizations, :name, :other_contacts, :phone_number, :surname, :password, :password_confirmation, :avatar
+  attr_accessible :city, :country, :date_of_birth, :education, :email, :login, :member_of_volunteer_organizations, :name, :other_contacts, :phone_number, :surname, :password, :password_confirmation, :avatar, :show_date_of_birth
   has_secure_password
   
   has_many :cans, dependent: :destroy
